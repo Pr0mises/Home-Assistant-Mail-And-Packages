@@ -459,7 +459,7 @@ def get_formatted_date() -> str:
     today = datetime.datetime.today().strftime("%d-%b-%Y")
     #
     # for testing
-    # today = "11-Jan-2021"
+    #today = "14-Apr-2023"
     #
     return today
 
@@ -1389,6 +1389,10 @@ def get_items(
                                 end = email_msg.find("Sguimiento")
                             elif email_msg.find("Verfolge deine(n) Artikel") != -1:
                                 end = email_msg.find("Verfolge deine(n) Artikel")
+                            elif email_msg.find("Lieferung verfolgen") != -1:
+                                end = email_msg.find("Lieferung verfolgen")
+                            elif email_msg.find("Ihr Paket verfolgen") != -1:
+                                end = email_msg.find("Ihr Paket verfolgen")
                             elif email_msg.find("Suivre") != -1:
                                 end = email_msg.find("Suivre")
 
